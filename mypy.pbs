@@ -1,0 +1,12 @@
+#!/bin/sh
+
+#PBS -q batch
+#PBS -N yamrun
+#PBS -l mem=1000mb
+#PBS -l nodes=4:ppn=12
+#PBS -l walltime=24:00:00
+#PBS -M germancho@gmail.com
+#PBS -m abe
+module load anaconda/python2
+cd $PBS_O_WORKDIR
+python main_ccx_par.py
